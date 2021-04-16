@@ -1,6 +1,9 @@
 # cypress
 cypress basic tests for shopping portal
 
+# to clone 
+git clone -b master https://github.com/KUMARSUMIT585/cypress.git
+
 #Installation steps and details-
 https://www.cypress.io
 preferred way - npm install cypress

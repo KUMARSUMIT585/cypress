@@ -10,8 +10,6 @@ describe('Sceanario - Items ordered within the existing stock range', () => {
     })
 
     const searchitem1 = "Canterbury of New Zealand Cricket Shirt";
-    const searchitem2 = "Hornsby House School Unisex Cricket Shirt, Cream";
-    const searchitem3 = "bcekjbkjebek";
     const orderquantity = 3;
     const appmessage1 = "It might be temporarily out of stock. Try a more generic search term";
     const appmessage2 = "Delivery Options";
@@ -37,7 +35,7 @@ describe('Sceanario - Items ordered within the existing stock range', () => {
 
                     //have selected 1 category - age here but can be parameterised if there is similar repeating trends for 
                     //other products , as of now it selects age groups available in app for new zealand cricket tshirt (6,8,10,12,14 years)
-                    cy.contains(sizes[4]).click()
+                    cy.contains(sizes[4]).click()    //this selects 14 years 
 
                     cy.get('[data-alert-text="Adding to basket"]').click()
                     cy.contains('Go to your basket').click()
@@ -96,11 +94,8 @@ describe('Sceanario - Items ordered within the existing stock range', () => {
             }
         })
 
-
         //to delete the cookies
         cy.clearCookies()
-
-        //cy.log('cookies deleted succesfully')
 
         //below code line is to verfiy whether whether the cookies is successfully deleted or not 
         cy.get('[alt="John Lewis & Partners Home"]').click()
@@ -114,10 +109,6 @@ describe('Sceanario - Items ordered within the existing stock range', () => {
             }
         })
 
-
-
     })
-
-
 
 })  
